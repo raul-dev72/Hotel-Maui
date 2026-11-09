@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppHotel.Views.Sobre"
+             Title="Sobre"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="{StaticResource Areia}">
+
+    <ScrollView>
+        <VerticalStackLayout VerticalOptions="CenterAndExpand"
+                             Padding="10"
+                             Spacing="10">
+
+            <Image Source="dotnet_bot.png"
+                   HeightRequest="120"
+                   Aspect="AspectFit"
+                   SemanticProperties.Description="Mascote do .NET" />
+
+            <Label Text="Sobre"
+                   FontFamily="Kalam"
+                   FontSize="38"
+                   TextColor="{StaticResource Primary}"
+                   SemanticProperties.HeadingLevel="Level1" />
+
+            <Frame Padding="15" Margin="10,0">
+                <VerticalStackLayout Spacing="12">
+
+                    <VerticalStackLayout>
+                        <Label Text="Aplicativo" TextTransform="Uppercase" FontSize="Caption" TextColor="{StaticResource Gray500}" />
+                        <Label Text="MauiAppHotel - Reserva de Hotel" TextColor="{StaticResource Primary}" />
+                    </VerticalStackLayout>
+
+                    <VerticalStackLayout>
+                        <Label Text="Desenvolvedor" TextTransform="Uppercase" FontSize="Caption" TextColor="{StaticResource Gray500}" />
+                        <Label Text="Raul" TextColor="{StaticResource Primary}" />
+                    </VerticalStackLayout>
+
+                    <VerticalStackLayout>
+                        <Label Text="Ano de desenvolvimento" TextTransform="Uppercase" FontSize="Caption" TextColor="{StaticResource Gray500}" />
+                        <Label Text="2026" TextColor="{StaticResource Primary}" />
+                    </VerticalStackLayout>
+
+                    <VerticalStackLayout>
+                        <Label Text="Versão" TextTransform="Uppercase" FontSize="Caption" TextColor="{StaticResource Gray500}" />
+                        <Label x:Name="lbl_versao" TextColor="{StaticResource Primary}" />
+                    </VerticalStackLayout>
+
+                    <VerticalStackLayout>
+                        <Label Text="Tecnologia" TextTransform="Uppercase" FontSize="Caption" TextColor="{StaticResource Gray500}" />
+                        <Label Text=".NET MAUI (C# e XAML)" TextColor="{StaticResource Primary}" />
+                    </VerticalStackLayout>
+
+                    <VerticalStackLayout>
+                        <Label Text="Descrição" TextTransform="Uppercase" FontSize="Caption" TextColor="{StaticResource Gray500}" />
+                        <Label Text="Calcula o valor da hospedagem de acordo com a suíte, a quantidade de adultos e crianças e o período da estadia."
+                               TextColor="{StaticResource Gray600}" />
+                    </VerticalStackLayout>
+
+                </VerticalStackLayout>
+            </Frame>
+
+            <Button Text="Voltar"
+                    HorizontalOptions="Center"
+                    Clicked="Voltar_Clicked" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
